@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+#chart #bars li {
+  display: table-cell;
+  width: 50px;
+  height: 200px;
+  position: relative;
+}
+
+#chart #bars li .bar {
+  display: block;
+  width: 30px;
+  margin-left: 15px;
+  bottom: 0;
+  position: absolute;
+}
+
+#chart #bars li .bar:hover {
+  cursor: pointer;
+}
+
+#chart #bars li .bar:hover:after {
+    content:'Value:' attr(data-value);
+    position: relative;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    z-index: 1;
+    top: 50%;
+    left: 105%;
+}
+
+#chart #bars li span {
+  position: absolute;   
+}
+
+</style>
+</head>
+	<body>
+  <h3>Move your mouse over a colored bar</h3>
+    <div id="chart">
+      <ul id="bars">
+        <li><div data-value="74" data-color="#ffa0a0" class="bar"></div></li>
+        <li><div data-value="45" data-color="#ffd4a0" class="bar"></div></li>
+        <li><div data-value="30" data-color="#fff79e" class="bar"></div></li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+	</body>
+</html>
